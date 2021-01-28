@@ -8,6 +8,12 @@ connectDB();
 
 app.use(express.json({ extented: false }));
 
+// Routes Defination
+
+app.use('/', require('./routes/index'));
+app.use('/api/', require('./routes/url'));
+
+
 const PORT = 5000;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
